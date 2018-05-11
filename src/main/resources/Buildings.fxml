@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="buildingScreen" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thegame.view.BuildingsViewController">
+<AnchorPane fx:id="buildingScreen" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thegame.newHope.view.BuildingsViewController">
    <children>
       <HBox layoutX="15.0" layoutY="326.0" prefHeight="133.0" prefWidth="556.0" />
       <HBox layoutX="25.0" layoutY="336.0" prefHeight="133.0" prefWidth="556.0">

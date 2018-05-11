@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxWidth="700.0" prefHeight="500.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thegame.view.GameViewController">
+<AnchorPane maxWidth="700.0" prefHeight="500.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thegame.newHope.view.GameViewController">
    <children>
       <Button fx:id="endDay" layoutX="170.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleEndDayButtonAction" text="End Day">
          <font>

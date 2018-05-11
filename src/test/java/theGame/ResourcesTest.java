@@ -1,24 +1,23 @@
 package theGame;
 
-import thegame.controller.Game;
-import thegame.model.Resources;
+import thegame.newHope.controller.Game;
+import thegame.newHope.model.ResourceType;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ResourcesTest {
+	Game game;
+	
 	@Test
     public void WoodIncrementTest() throws Exception {
 
 	Game game = Game.getInstance();
 	
 	int wood = game.getResources().getWood();
-	int stone = game.getResources().getStone();
-	int iron = game.getResources().getIron();
 	game.getResources().addWood();
 	game.getResources().addIron();
 	
 	Assert.assertEquals(game.getResources().getWood(), wood + game.getResources().getIncrementWood());
-	Assert.assertEquals(game.getResources().getIron(), iron + game.getResources().getIncrementIron());
 	}
 	
 	@Test
@@ -42,6 +41,22 @@ public class ResourcesTest {
 		
 		Assert.assertEquals(game.getResources().getIron(), iron + game.getResources().getIncrementIron());
 	}
+	
+	 @Test
+	 public void incrementType() {
+		 game = game.getInstance();
+		 
+		 game.resetGame();
+		 
+		 game.applyBuildingEffect(ResourceType.Wood, 10);
+		 game.applyBuildingEffect(ResourceType.Stone, 10);
+		 game.applyBuildingEffect(ResourceType.Iron, 10);
+		 
+		 Assert.assertEquals(20 , game.getResources().getIncrementWood());
+		 Assert.assertEquals(15 , game.getResources().getIncrementStone());
+		 Assert.assertEquals(12 , game.getResources().getIncrementIron());
+
+	 }
 
 	
 }
