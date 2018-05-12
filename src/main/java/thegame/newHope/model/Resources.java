@@ -98,13 +98,11 @@ public class Resources {
 	public int addWood() {
 		this.wood += this.incrementWood;
 		return this.wood;
-		
 	}
 	
     public int addStone() {
     	this.stone += this.incrementStone;
     	return this.stone;
-    
     }
     
     public int addIron() {

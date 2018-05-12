@@ -72,20 +72,6 @@ public class BuildingsViewController implements Initializable {
 		  }
 		}
 	
-	@FXML
-	private void handleBuySawmillButtonAction(ActionEvent event) {
-		
-	}
-	
-	@FXML
-	private void handleBuyStoneQuarryButtonAction(ActionEvent event) {
-		
-	}
-	
-	@FXML
-	private void handleBuyIronMineButtonAction(ActionEvent event) {
-		
-	}
 	
 	@Override
     public void initialize(URL url, ResourceBundle rb) {

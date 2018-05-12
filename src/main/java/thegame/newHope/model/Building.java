@@ -70,7 +70,4 @@ public class Building {
 	public void setType(ResourceType type) {
 		this.type = type;
 	}
-
-	
-	
 }

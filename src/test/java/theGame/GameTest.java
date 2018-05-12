@@ -90,6 +90,26 @@ public class GameTest
 		 Assert.assertEquals(game.getResources().getIron(), iron -= 10);
 	 }
 	 
+	 @Test
+	 public void applyBuildingEffectTest() {
+		 game = game.getInstance();
+		 
+		 game.resetGame();
+		 
+		 int woodIncrement = game.getResources().getIncrementWood();
+		 int stoneIncrement = game.getResources().getIncrementStone();
+		 int ironIncrement = game.getResources().getIncrementIron();
+		 
+		 game.applyBuildingEffect(ResourceType.Wood, 10);
+		 game.applyBuildingEffect(ResourceType.Stone, 10);
+		 game.applyBuildingEffect(ResourceType.Iron, 10);
+		 
+		 Assert.assertEquals(woodIncrement += 10, game.getResources().getIncrementWood());
+		 Assert.assertEquals(stoneIncrement += 10, game.getResources().getIncrementStone());
+		 Assert.assertEquals(ironIncrement += 10, game.getResources().getIncrementIron());
+
+	 }
+	 
 
 
 }
