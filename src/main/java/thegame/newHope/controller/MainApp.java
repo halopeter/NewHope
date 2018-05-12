@@ -14,11 +14,8 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) throws IOException {
 
 		Parent root = FXMLLoader.load((getClass().getClassLoader().getResource("StartingGame.fxml")));
-		// Parent root =
-		// FXMLLoader.load(getClass().getResource("/view/StartingGame.fxml"));
 
 		Scene scene = new Scene(root);
-		scene.getStylesheets().add("/Maven Dependencies/junit-3.8.1.jar/stylesheet.css");
 
 		primaryStage.setTitle("JavaFX and Maven");
 		primaryStage.setScene(scene);
