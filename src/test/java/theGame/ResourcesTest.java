@@ -1,6 +1,6 @@
 package theGame;
 
-import thegame.newHope.controller.Game;
+import thegame.newHope.model.Game;
 import thegame.newHope.model.ResourceType;
 import thegame.newHope.model.Resources;
 

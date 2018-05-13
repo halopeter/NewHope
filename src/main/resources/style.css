@@ -1,0 +1,17 @@
+.root{
+    -fx-font-size: 10pt;
+    -fx-font-family: "Trebuchet MS";
+    
+    -fx-base: #FAF6ED;
+    -fx-background: #E9F2DA;
+}
+
+#building-name{
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 30;
+}
+
+#building-description{
+	-fx-font-style: italic;
+	-fx-padding: 0 0 10 0;
+}

@@ -1,11 +1,7 @@
-package thegame.newHope.controller;
+package thegame.newHope.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import thegame.newHope.model.Building;
-import thegame.newHope.model.ResourceType;
-import thegame.newHope.model.Resources;
 
 public class Game {
 

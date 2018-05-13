@@ -13,22 +13,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import thegame.newHope.controller.Game;
-import thegame.newHope.controller.SaveController;
+import thegame.newHope.model.Game;
+import thegame.newHope.model.SaveController;
 
 public class MenuViewController implements Initializable{
 
 	Game game;
 	SaveController save;
+	@FXML
+	ImageView mainImageTitle;
 	
 	@FXML
 	private void handleNewButton(ActionEvent event) {
 		try {
 			Parent mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("Window.fxml"));
 			
-            Stage stage = (Stage) mainTitle.getScene().getWindow();
+            Stage stage = (Stage) mainImageTitle.getScene().getWindow();
             Scene scene = new Scene(mainMenu);
+            scene.getStylesheets().add("style.css");
 
             stage.setScene(scene);
             stage.show();
@@ -52,7 +56,7 @@ public class MenuViewController implements Initializable{
 		try {
 			Parent mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("Window.fxml"));
 			
-            Stage stage = (Stage) mainTitle.getScene().getWindow();
+            Stage stage = (Stage) mainImageTitle.getScene().getWindow();
             Scene scene = new Scene(mainMenu);
 
             stage.setScene(scene);
@@ -71,9 +75,6 @@ public class MenuViewController implements Initializable{
 	
 	@FXML
 	private Button exitButton;
-	
-	@FXML
-	private Label mainTitle;
 	
 	@Override
     public void initialize(URL url, ResourceBundle rb) {

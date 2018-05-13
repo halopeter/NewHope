@@ -2,9 +2,9 @@ thegame\newHope\view\BuildingsViewController.class
 thegame\newHope\view\MenuViewController.class
 thegame\newHope\model\SaveData.class
 thegame\newHope\model\Building.class
+thegame\newHope\model\SaveController.class
 thegame\newHope\model\Resources.class
 thegame\newHope\controller\MainApp.class
-thegame\newHope\controller\SaveController.class
 thegame\newHope\view\GameViewController.class
+thegame\newHope\model\Game.class
 thegame\newHope\model\ResourceType.class
-thegame\newHope\controller\Game.class

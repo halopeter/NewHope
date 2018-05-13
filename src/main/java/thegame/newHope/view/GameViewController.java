@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import thegame.newHope.controller.Game;
-import thegame.newHope.controller.SaveController;
+import thegame.newHope.model.Game;
 import thegame.newHope.model.Resources;
+import thegame.newHope.model.SaveController;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,6 +53,7 @@ public class GameViewController implements Initializable {
 			
             Stage stage = (Stage) DayCounter.getScene().getWindow();
             Scene scene = new Scene(buildings);
+            scene.getStylesheets().add("style.css");
 
             stage.setScene(scene);
             stage.show();

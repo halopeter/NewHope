@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<saveData>
+    <dayCounter>14</dayCounter>
+    <resources>
+        <incrementIron>2</incrementIron>
+        <incrementStone>5</incrementStone>
+        <incrementWood>10</incrementWood>
+        <iron>0</iron>
+        <stone>5</stone>
+        <wood>140</wood>
+    </resources>
+</saveData>

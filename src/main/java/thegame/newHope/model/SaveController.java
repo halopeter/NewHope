@@ -1,4 +1,4 @@
-package thegame.newHope.controller;
+package thegame.newHope.model;
 
 import java.io.File;
 
@@ -7,12 +7,11 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import thegame.newHope.model.SaveData;
-
 public class SaveController {
 
 	
 	Game game;
+	private final String fileName = "New_Hope_Save.data";
 	
 	
 	public SaveController() {
@@ -22,11 +21,12 @@ public class SaveController {
 	}
 	
 	public void saveGame() {
-		  SaveData gameSave = new SaveData(game.resources, game.getDayCounter());
+		  SaveData gameSave = new SaveData(game.getResources(), game.getDayCounter());
 
 		  try {
 
-			File file = new File("D:\\Egyetem\\file.xml");
+			File file = new File(fileName);
+			System.out.println("file existS? " + file.exists());
 			JAXBContext jaxbContext = JAXBContext.newInstance(SaveData.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
@@ -45,8 +45,7 @@ public class SaveController {
 		SaveData gameLoad = new SaveData();
 		
 		 try {
-
-				File file = new File("D:\\Egyetem\\file.xml");
+				File file = new File(fileName);
 				JAXBContext jaxbContext = JAXBContext.newInstance(SaveData.class);
 
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();

@@ -2,8 +2,9 @@ package theGame;
 
 import org.junit.Assert;
 import org.junit.Test;
-import thegame.newHope.controller.Game;
+
 import thegame.newHope.model.Building;
+import thegame.newHope.model.Game;
 import thegame.newHope.model.ResourceType;
 import thegame.newHope.model.Resources;
 
