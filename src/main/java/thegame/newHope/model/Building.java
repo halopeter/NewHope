@@ -1,16 +1,10 @@
 package thegame.newHope.model;
 
-/**
- * Ez a {@code Building} osztály reprezentálja a játékban megvehető építményeket,
- * melyeknek van megvételi ára, neve, és hogy mennyivel növeli meg bizonyos
- * nyersanyagok gyűjtését naponta.
- */
-
+/** A class named Building that will represent the purchasable buildings in the game */
 public class Building {
 
-	/**
-	 * {@code woodCost} hogy egy adott épületnek mennyi a fa építési költsége
-	 */
+	/** The material costs of the building that can be bought,
+	 * and the effect that it will have on production. */
 	private int woodCost;
 	private int stoneCost;
 	private int ironCost;
@@ -19,6 +13,7 @@ public class Building {
 	private int increment;
 	private ResourceType type;
 	
+	/** Constructor of a Building */
 	public Building(String name, String effect,int increment, int woodCost, int stoneCost, int ironCost, ResourceType type) {
 		this.woodCost = woodCost;
 		this.stoneCost = stoneCost;
@@ -28,6 +23,8 @@ public class Building {
 		this.increment = increment;
 		this.type = type;
 	}
+	
+	/** GETTERS and SETTERS */
 	public int getWoodCost() {
 		return woodCost;
 	}

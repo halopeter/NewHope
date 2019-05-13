@@ -1,5 +1,7 @@
 package thegame.newHope.model;
 
+/** A class with the Resource types available in the game
+ * and the corresponsive gathered amount by Daily bases. */
 public class Resources {
 	
     private int wood;
@@ -9,6 +11,7 @@ public class Resources {
     private int incrementStone;
     private int incrementIron;
     
+    /** GETTERS and SETTERS */
     public int getWood() {
         return wood;
     }
@@ -72,6 +75,7 @@ public class Resources {
 	}
 
 
+	/** The initial resource amount that the player stars the game with. */
     public Resources() {
     	
     	this.wood = 10;
@@ -84,8 +88,7 @@ public class Resources {
 
     	}
     
-    
-    
+    /** Constructor of Resources. */
 	public Resources(int wood, int stone, int iron, int incrementWood, int incrementStone, int incrementIron) {
 		this.wood = wood;
 		this.stone = stone;
@@ -95,19 +98,21 @@ public class Resources {
 		this.incrementIron = incrementIron;
 	}
 
+	/** This function adds the gathered amount of wood after a day. */
 	public int addWood() {
 		this.wood += this.incrementWood;
 		return this.wood;
 	}
 	
+	/** This function adds the gathered amount of stone after a day. */
     public int addStone() {
     	this.stone += this.incrementStone;
     	return this.stone;
     }
     
+    /** This function adds a gathered amount of iron after a day. */
     public int addIron() {
         this.iron += this.incrementIron;
         return this.iron;
     }
-
 }
