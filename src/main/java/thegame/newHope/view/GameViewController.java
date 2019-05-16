@@ -1,3 +1,4 @@
+//CHECKSTYLE:OFF
 package thegame.newHope.view;
 
 import java.io.IOException;
@@ -20,10 +21,10 @@ import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
 public class GameViewController implements Initializable {
-	
+
 	Game game;
 	SaveController save;
-	
+
 	@FXML
 	private void handleEndDayButtonAction(ActionEvent event) {
 		game.incrementDay();
@@ -43,14 +44,14 @@ public class GameViewController implements Initializable {
 			iron.setText(Integer.toString(nyersanyag.getIron()));
 		}
 
-		
+
 	}
-	
+
 	@FXML
 	private void handleBuildingsButtonAction(ActionEvent event) {
 		try {
 			Parent buildings = FXMLLoader.load(getClass().getClassLoader().getResource("Buildings.fxml"));
-			
+
             Stage stage = (Stage) DayCounter.getScene().getWindow();
             Scene scene = new Scene(buildings);
             scene.getStylesheets().add("style.css");
@@ -62,71 +63,71 @@ public class GameViewController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@FXML
 	private void handleExitButtonAction(ActionEvent event) {
 		Platform.exit();
 	}
-	
+
 	@FXML
 	private void handleSaveGameButtonAction(ActionEvent event) {
 		save.saveGame();
 	}
-	
+
 
 	@FXML
 	private Button endDay;
-	
+
 	@FXML
 	private Button buildingsButton;
-	
+
 	@FXML
 	private Button exitButton;
-	
+
 	@FXML
 	private Button saveGameButton;
-	
+
 	@FXML
 	private Label DayCounter;
-	
+
 	@FXML
 	private Label wood;
-	
+
 	@FXML
 	private Label stone;
-	
+
 	@FXML
 	private Label iron;
-	
+
 	@FXML
 	private Label plusWood;
-	
+
 	@FXML
 	private Label plusStone;
-	
+
 	@FXML
 	private Label plusIron;
-	
+
 	@FXML
 	private Label woodPlusSymbol;
-	
+
 	@FXML
 	private Label stonePlusSymbol;
-	
+
 	@FXML
 	private Label ironPlusSymbol;
-	
+
 	@FXML
 	private RadioButton chosenWood;
 
 	@FXML
 	private RadioButton chosenStone;
-	
+
 	@FXML
 	private RadioButton chosenIron;
-	
+
 	private Resources nyersanyag;
-	
+
 	@Override
 	    public void initialize(URL url, ResourceBundle rb) {
 			game = Game.getInstance();
@@ -139,5 +140,5 @@ public class GameViewController implements Initializable {
 	        plusWood.setText(Integer.toString(nyersanyag.getIncrementWood()));
 	        plusStone.setText(Integer.toString(nyersanyag.getIncrementStone()));
 	        plusIron.setText(Integer.toString(nyersanyag.getIncrementIron()));
-	    }    
+	    }
 }

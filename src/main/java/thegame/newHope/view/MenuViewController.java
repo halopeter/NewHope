@@ -1,3 +1,4 @@
+//CHECKSTYLE:OFF
 package thegame.newHope.view;
 
 import java.io.IOException;
@@ -24,62 +25,62 @@ public class MenuViewController implements Initializable{
 	SaveController save;
 	@FXML
 	ImageView mainImageTitle;
-	
+
 	@FXML
 	private void handleNewButton(ActionEvent event) {
 		try {
 			Parent mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("Window.fxml"));
-			
+
             Stage stage = (Stage) mainImageTitle.getScene().getWindow();
             Scene scene = new Scene(mainMenu);
             scene.getStylesheets().add("style.css");
 
             stage.setScene(scene);
             stage.show();
-            
+
             game = Game.getInstance();
-            
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@FXML
     private void handleExitButtonAction(ActionEvent event) {
         Platform.exit();
     }
-	
+
 	@FXML
 	private void handleContinuteButton(ActionEvent event) {
 		save.loadGame();
-		
+
 		try {
 			Parent mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("Window.fxml"));
-			
+
             Stage stage = (Stage) mainImageTitle.getScene().getWindow();
             Scene scene = new Scene(mainMenu);
 
             stage.setScene(scene);
             stage.show();
-                        
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@FXML
 	private Button newButton;
-	
+
 	@FXML
 	private Button continueButton;
-	
+
 	@FXML
 	private Button exitButton;
-	
+
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
 		game = Game.getInstance();
 		save = new SaveController();
 }
-	
+
 }

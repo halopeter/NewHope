@@ -25,8 +25,7 @@
 	<scm>
 		<url>https://github.com/halopeter/NewHope</url>
 	</scm>
-
-	<inceptionYear>2018</inceptionYear>
+	<inceptionYear>2019</inceptionYear>
 
 	<licenses>
 		<license>
@@ -168,6 +167,11 @@
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>2.9</version>
 			</plugin>
+			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.0.0-M2</version>
+      </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
